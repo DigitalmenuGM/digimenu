@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Dining | Digital Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="restaurant-name">Gourmet Dining</h1>
+        <p>Exquisite cuisine for refined palates</p>
+    </header>
+
+    <nav class="category-nav">
+        <ul class="category-list">
+            <li><button class="category-btn active" data-category="starters">Starters</button></li>
+            <li><button class="category-btn" data-category="main-courses">Main Courses</button></li>
+            <li><button class="category-btn" data-category="desserts">Desserts</button></li>
+            <li><button class="category-btn" data-category="drinks">Drinks</button></li>
+        </ul>
+    </nav>
+
+    <main class="menu-section">
+        <section id="starters" class="menu-category visible">
+            <h2 class="category-title">Starters</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3 class="item-name">Classic Caesar Salad</h3>
+                    <p class="item-description">Crisp romaine lettuce, parmesan cheese, croutons, and our house-made Caesar dressing</p>
+                    <p class="item-price">$12</p>
+                    <div class="dietary-info">
+                        <span class="dietary-badge">Vegetarian</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h3 class="item-name">Truffle Mushroom Soup</h3>
+                    <p class="item-description">Creamy wild mushroom soup with truffle oil and fresh herbs</p>
+                    <p class="item-price">$14</p>
+                    <div class="dietary-info">
+                        <span class="dietary-badge">Vegetarian</span>
+                        <span class="dietary-badge">Gluten-free</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="main-courses" class="menu-category">
+            <h2 class="category-title">Main Courses</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3 class="item-name">Grilled Salmon</h3>
+                    <p class="item-description">Fresh Atlantic salmon with lemon butter sauce, served with seasonal vegetables</p>
+                    <p class="item-price">$32</p>
+                    <div class="dietary-info">
+                        <span class="dietary-badge">Gluten-free</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h3 class="item-name">Beef Tenderloin</h3>
+                    <p class="item-description">8oz grass-fed beef tenderloin with red wine reduction and truffle mashed potatoes</p>
+                    <p class="item-price">$45</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="desserts" class="menu-category">
+            <h2 class="category-title">Desserts</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3 class="item-name">Chocolate Lava Cake</h3>
+                    <p class="item-description">Warm chocolate cake with a molten center, served with vanilla ice cream</p>
+                    <p class="item-price">$14</p>
+                    <div class="dietary-info">
+                        <span class="dietary-badge">Vegetarian</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h3 class="item-name">Crème Brûlée</h3>
+                    <p class="item-description">Classic French vanilla custard with caramelized sugar top</p>
+                    <p class="item-price">$12</p>
+                    <div class="dietary-info">
+                        <span class="dietary-badge">Gluten-free</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drinks" class="menu-category">
+            <h2 class="category-title">Drinks</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3 class="item-name">Signature Martini</h3>
+                    <p class="item-description">Premium vodka, dry vermouth, olive juice</p>
+                    <p class="item-price">$16</p>
+                </div>
+                <div class="menu-item">
+                    <h3 class="item-name">Craft Beer Selection</h3>
+                    <p class="item-description">Ask your server about our rotating selection of local craft beers</p>
+                    <p class="item-price">$8</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
