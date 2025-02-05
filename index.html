@@ -2,25 +2,34 @@
 <html>
 <head>
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: clamp(1rem, 5vw, 3rem);
   background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
   border-radius: 10px;
   font-family: 'Arial', sans-serif;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .logo {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: bold;
   background: linear-gradient(45deg, #00c6ff, #0072ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .logo::before {
@@ -39,15 +48,15 @@
 
 .slogan {
   margin-top: 1.5rem;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 3vw, 1rem);
   color: #ffffff;
   opacity: 0.9;
   text-align: center;
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: clamp(30px, 8vw, 40px);
+  height: clamp(30px, 8vw, 40px);
   position: relative;
   margin: 1rem;
   animation: rotate 8s linear infinite;
@@ -64,32 +73,49 @@
 }
 
 .description {
-  max-width: 800px;
+  max-width: min(90%, 800px);
   margin: 2rem auto;
+  padding: 2rem;
   color: #ffffff;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  background: rgba(0, 198, 255, 0.1);
+  border-left: 4px solid #00c6ff;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 4px 15px rgba(0, 198, 255, 0.2);
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.description:hover {
+  transform: translateX(0);
+  background: rgba(0, 198, 255, 0.15);
 }
 
 .stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: min(90%, 800px);
   margin-top: 2rem;
-  flex-wrap: wrap;
 }
 
 .stat-item {
   text-align: center;
   color: #ffffff;
-  padding: 1rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  min-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
 }
 
 .stat-number {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
   font-weight: bold;
   color: #00c6ff;
   margin-bottom: 0.5rem;
@@ -108,6 +134,16 @@
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .description {
+    padding: 1.5rem;
+  }
 }
 </style>
 </head>
